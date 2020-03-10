@@ -1,0 +1,55 @@
+﻿
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">enter your infomation</h5>
+        </div>
+        @* W *@
+
+        <div class="card-body">
+            @using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
+            {
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name">
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name">
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="DateOfBirth" type="datetime" class="form-control" placeholder="DOB">
+                </div>
+                <h5>Car and drivers information</h5>
+                <div class="form-group col-md-12">
+                    <input name="CarYear" type="number" class="form-control" placeholder="Car Year">
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make">
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model">
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="Tickets" type="number" class="form-control"  placeholder="Tickets">
+                </div>
+                <div class="form-group col-md-12">
+                   <p>have you had a DUI?</p>
+                   Yes @Html.RadioButton("Dui", true)
+                   No @Html.RadioButton("Dui", false)
+                </div>
+
+                <div class="form-group col-md-12">
+                    <p>do you want full coverage?</p>
+                   Yes @Html.RadioButton("FullCoverage", true)
+                    No @Html.RadioButton("FullCoverage", false)
+                    
+                </div>
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>
