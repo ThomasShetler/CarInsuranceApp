@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewsletterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SignUps_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="Removed" Type="datetime" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="CarYear" Type="int" />
+    <Property Name="CarMake" Type="varchar" MaxLength="50" />
+    <Property Name="CarModel" Type="varchar" MaxLength="50" />
+    <Property Name="Dui" Type="bit" />
+    <Property Name="Tickets" Type="int" />
+    <Property Name="FullCoverage" Type="bit" />
+    <Property Name="MonthlyTotal" Type="int" />
+  </EntityType>
+  <EntityContainer Name="NewsletterModelStoreContainer">
+    <EntitySet Name="SignUps_" EntityType="Self.SignUps_" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
