@@ -33,7 +33,7 @@ namespace CarInsuranceApp.Controllers
                     signupVm.FirstName = signup.FirstName;
                     signupVm.LastName = signup.LastName;
                     signupVm.EmailAddress = signup.EmailAddress;
-                    signupVm.MonthlyTotal = signup.MonthlyTotal;
+                    signupVm.MonthlyTotal = Convert.ToInt32(signup.MonthlyTotal);
                     signupVms.Add(signupVm);
                 }
                 return View(signupVms);

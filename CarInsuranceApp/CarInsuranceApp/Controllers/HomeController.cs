@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CarInsuranceApp.View_Models;
 
 namespace CarInsuranceApp.Controllers
-{
+
+{ 
     public class HomeController : Controller
     {
+        public int last;
         public ActionResult Index()
         {
             return View();
@@ -79,9 +82,8 @@ namespace CarInsuranceApp.Controllers
                     signup.MonthlyTotal = monthlytotal;
                     db.SignUps_.Add(signup);
                     db.SaveChanges();
+                    return View("TotalQuote", signup);
                 }
-
-                return View("Success");
             }
         }
     
@@ -98,5 +100,6 @@ namespace CarInsuranceApp.Controllers
 
             return View();
         }
+    
     }
 }
